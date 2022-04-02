@@ -1,0 +1,15 @@
+import os
+import requests
+import time
+
+os.environ['site_name'] = 'Some Value'
+os.environ['num_of_iterations'] = 'Some Value'
+
+is_completed = False
+
+while (is_completed == False):
+    start = time.perf_counter()
+    response = requests.get("https://web.whatsapp.com")
+    is_completed = True
+    print(time.perf_counter() - start)
+
