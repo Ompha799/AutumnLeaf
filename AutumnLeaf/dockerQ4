@@ -1,0 +1,8 @@
+FROM python
+RUN pip3 install requests
+WORKDIR "/app" 
+
+ADD . /question4.py /
+
+
+CMD [ "python", "question4.py" ]
